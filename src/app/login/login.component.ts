@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
    
-    console.log(this.formModel);
   }
   
   //返回
@@ -45,6 +44,7 @@ export class LoginComponent implements OnInit {
         }
       }
     })
+    localStorage.username = this.formModel.value.mobile;
     location.href="../home";
   }
 }
