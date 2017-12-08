@@ -1,0 +1,36 @@
+<div class="time">
+      <div class="top">
+        <span>葫芦时刻</span>
+        <i class="iconfont icon-icon"></i>
+      </div>
+    
+      <div id="all">
+        <div class="content" *ngFor="let item of data" >
+          <div class="contenttop">
+            <div class="left">
+                <img src="{{item?.feedUser.displayImage}}" alt="">
+                <span>{{item?.feedUser.username}}</span>
+            </div>
+           
+            <span>关注</span>
+          </div>
+
+          <div class="ceterImage">
+              <img src="{{item?.coverImage}}" alt="">
+          </div>
+          <div class="introduction">
+              <p>{{item?.title}}</p>
+              <p>{{item?.summary}}</p>
+          </div>
+          <div class="contentbottom">
+              <p>
+                <i class="iconfont icon-shoucang"></i>
+                <i class="iconfont icon-xiaoxi"></i>
+                <i class="iconfont icon-shoucang"></i>
+              </p>
+              <i class="iconfont icon-jinlingyingcaiwangtubiao50"></i>
+          </div>
+        </div>
+      </div>
+     
+</div>
