@@ -1,0 +1,37 @@
+<div class="register">
+  <header><i class="iconfont icon-icon1" (click)="goback()"></i></header>
+  <section>
+    <h1>注册葫芦</h1>
+    <form [formGroup]="formModel" novalidate>
+      <div class="type">
+        <input type="text" formControlName="mobile" placeholder="手机号">
+        <div [hidden]="formModel.get('mobile').valid||formModel.get('mobile').untouched">
+          <span [hidden]="!formModel.hasError('mobile','mobile')">请输入正确的手机号</span>
+        </div>
+      </div>
+      
+      <div formGroupName="passwordGroup">
+          <div class="type">
+            <input type="password"  formControlName="password" placeholder="密码">
+            <div [hidden]="!formModel.hasError('minlength',['passwordGroup','password'])">
+              <span>密码长度最小为6位</span>
+            </div>
+          </div>
+          <div class="type">
+            <input type="password" formControlName="pconfirm" placeholder="确认密码">
+            <div [hidden]="!formModel.hasError('equal','passwordGroup') || formModel.hasError('minlength',['passwordGroup','password'])">
+              <span>密码和确认密码不一致</span>
+            </div>
+          </div>
+      </div>
+    </form>
+      <button class="submit" (click)="onSubmit()" [disabled]="!(formModel.get('mobile').valid&&!formModel.hasError('minlength',['passwordGroup','password'])&&formModel.get('passwordGroup').touched&&!formModel.hasError('equal','passwordGroup'))" [class.red]="formModel.get('mobile').valid&&!formModel.hasError('minlength',['passwordGroup','password'])&&formModel.get('passwordGroup').touched&&!formModel.hasError('equal','passwordGroup')">注册</button>
+      <p>注册葫芦意味着已阅读并同意<a href="#">用户使用协议</a></p>
+  </section> 
+</div>
+
+
+
+
+
+

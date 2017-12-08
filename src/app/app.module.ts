@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {Routes,RouterModule} from "@angular/router";
-import {HttpModule} from "@angular/http";
+import {Routes,RouterModule} from '@angular/router';
+import {HttpModule} from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
@@ -10,9 +10,13 @@ import { FindComponent } from './find/find.component';
 import { MessageComponent } from './message/message.component';
 import { MineComponent } from './mine/mine.component';
 import { GettimedataService } from './service/gettimedata.service';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 const routes:Routes = [
   {path:"",redirectTo:"home",pathMatch:"full"},
   {path:"home",component:HomeComponent,
+  
   children:[
     {path:"",redirectTo:"time",pathMatch:"full"},
     {path:"time",component:TimeComponent},
@@ -22,7 +26,8 @@ const routes:Routes = [
    
   ]
 },
-
+{path:"login",component:LoginComponent},
+{path:"register",component:RegisterComponent}
 ]
 
 @NgModule({
@@ -33,13 +38,16 @@ const routes:Routes = [
     TimeComponent,
     FindComponent,
     MessageComponent,
-    MineComponent
+    MineComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpModule, 
-   
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [GettimedataService],
   bootstrap: [AppComponent]

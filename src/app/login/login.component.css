@@ -1,0 +1,74 @@
+
+.login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    width: 100%;
+    height: 1.157407rem;
+    box-sizing: border-box;
+    padding-left: 5%;
+    line-height: 1.157407rem;
+    color: #b5b5b5;
+}
+section{
+    width: 100%;
+    height: 100%;
+    background: #fafafa;
+    flex: 1;
+}
+section h1{
+    font-size: .518519rem;
+    text-align: center;
+    line-height: 1.759259rem;
+    font-weight: 900;
+}
+section form{
+    border: 1px solid #e0e0e0;
+    border-radius: .092593rem;
+    width: 90%;
+    margin: 0 auto;
+}
+section form input{
+    width: 100%;
+    height: 1.268519rem;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    text-indent: 2em;
+}
+section form div:first-of-type input{
+    border-top-left-radius: .092593rem;
+    border-top-right-radius: .092593rem;
+}
+section form div:last-of-type input{
+    border-bottom-left-radius: .092593rem;
+    border-bottom-right-radius: .092593rem;
+}
+
+section .submit{
+    width: 90%;
+    height: 1.018519rem;
+    background: #ef7d86;
+    color: white;
+    border: 0;
+    border-radius: .092593rem;
+    box-sizing: border-box;
+    margin-top: .407407rem;
+    margin-left: 5%;
+}
+section p{
+    margin-top: .953704rem;
+    text-align: center;
+    color: #c3c3c3;
+    font-size: .259259rem;
+}
+section p a{
+    color: #c3c3c3;
+    font-size: .259259rem;
+    text-decoration: underline;
+}
+.red{
+    background: red !important;
+}
