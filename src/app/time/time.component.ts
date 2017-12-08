@@ -8,6 +8,7 @@ import { GettimedataService } from '../service/gettimedata.service';
 })
 export class TimeComponent implements OnInit {
   private data=[];
+  private aa = false;
   constructor(private getdata:GettimedataService) { }
 
   ngOnInit() {
@@ -16,6 +17,14 @@ export class TimeComponent implements OnInit {
     .subscribe((resulte)=>{
       this.data = resulte.json();
       console.log(this.data);
+    })
+  }
+
+  dianzan(id){
+    console.log(1);
+    this.getdata.timedianzan("sss",id)
+    .subscribe((result)=>{
+      console.log(result);
     })
   }
 
