@@ -1,0 +1,181 @@
+.searchs{
+    width: 100%;
+    height: 100%;
+    background: #f7f7f7;
+}
+
+.searchs>.top{
+   width: 100%;
+   height: 1.851852rem;
+   background: white;
+   box-sizing: border-box;
+   padding:.462963rem 0;
+   
+}
+
+.searchs>.top>.left{
+    width: 15%;
+    height: 100%;
+ 
+    float: left;
+}
+
+.searchs>.top>.left>span,.top>.left>span>i{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: .925926rem;
+}
+
+.searchs>.top>.left>span>i{
+    font-size: .37037rem;
+    color: #999999;
+}
+
+.searchs>.top>.center{
+    width: 65%;
+    height: 100%;
+  
+    float: left;
+}
+
+
+.searchs>.top>.center>input{
+    width: 89%;
+    float: right;
+    height: 100%;
+    background: #eeeeee;
+    border: none;
+    border-radius: .185185rem;
+    box-sizing: border-box;
+    padding-left: .185185rem;
+
+}
+
+.searchs>.top>.right{
+    width: 20%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: .925926rem;
+    font-size: .314815rem;
+}
+
+.searchs>.top>.right>span{
+    display: inline-block;
+    width:10%;
+    height: 100%;
+    
+
+}
+.searchs>.top>.right>span>i{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: .925926rem;
+    font-size: .37037rem;
+    color: #999999;
+
+}
+
+.searchs>.bottom{
+    width: 100%;
+    background: #f7f7f7;
+    box-sizing: border-box;
+    padding:0 .277778rem;
+    position: absolute;
+    top: 1.851852rem;
+    bottom: 0;
+    overflow: auto;
+    
+    
+}
+
+
+
+
+
+
+dl{
+    width: 49%;
+    height: 9.537037rem;
+    background: white;
+    float: left;
+    box-sizing: border-box;
+    margin-top: .185185rem;
+
+    
+    
+}
+dl>dd{
+    width: 100%;
+    height: 6.111111rem;
+    background: yellowgreen;
+   
+}
+dl>dd>img, dl>dd>a>img{
+    width: 100%;
+    height: 100%;
+}
+dl>dt{
+    width: 100%;
+    height: 3.148148rem;
+    
+    box-sizing: border-box;
+    padding: 0 .416667rem;
+}
+dl>dt>h3{
+    width: 100%;
+    height: .925926rem;
+    line-height: .925926rem;
+    text-align: left;
+   font-size: .314815rem;
+}
+dl>dt>p:nth-of-type(1){
+    width: 100%;
+    height: 1.203704rem;
+    line-height: .555556rem;
+    overflow: hidden;
+   
+    color: #999999;
+    font-size: .277778rem;
+}
+
+dl>dt>p:nth-of-type(2){
+    width: 100%;
+    height: .925926rem;
+    
+}
+dl>dt>p:nth-of-type(2)>span:nth-of-type(1){
+    display: block;
+   width: 1.851852rem;
+    height: .925926rem;
+    text-align: left;
+    line-height: .925926rem;
+    float: left;
+   
+    color: #dcb261;
+    font-weight: bold;
+}
+dl>dt>p:nth-of-type(2)>span:nth-of-type(2){
+    display: block;
+    width: .648148rem;
+    height:  .648148rem;
+    float: right;
+    border-radius: .092593rem;
+    background: red;
+
+}
+
+dl>dt>p:nth-of-type(2)>span:nth-of-type(2)>img{
+    width: 100%;
+    height: 100%;
+}
+dl:nth-of-type(odd){
+   float: left;
+}
+dl:nth-of-type(even){
+    float: right;
+}

@@ -20,10 +20,13 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "./assets/css/flexible.css",
-        "./assets/font/iconfont.css"
+        "../src/assets/font/iconfont.css",
+        "../src/assets/css/flexible.css",
+        "assets/css/swiper-3.3.1.min.css"
       ],
       "scripts": [
+        "../node_modules/_jquery@3.2.1@jquery/dist/jquery.js",
+        "assets/js/swiper-3.3.1.min.js"
         
       ],
       "environmentSource": "environments/environment.ts",

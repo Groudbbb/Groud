@@ -1,0 +1,74 @@
+
+
+
+
+
+.head{
+    width: 100%;
+    height: 1.851852rem;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.851852rem;
+    font-size: .462963rem;
+    border-bottom: 1px solid #cccccc;
+
+
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 1.851852rem;
+    bottom: 1.111111rem;
+  
+    overflow: auto;
+
+    
+}
+
+
+.content>ul{
+    width: 100%;
+
+    
+}
+
+
+.content>ul>li{
+    width: 100%;
+    height: 1.851852rem;
+    box-shadow: 0 0 10px #cccccc;
+}
+
+.content>ul>li>span{
+    width: 20%;
+    height:1.851852rem;
+    float: left;
+    display: block;
+    position: relative;
+}
+
+.content>ul>li>span>img{
+    display: block;
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: orange;
+    border-radius: 50%;
+
+}
+
+.content>ul>li>p{
+    width:80%;
+    height: 1.851852rem;
+    text-align: left;
+    font-size: .37037rem;
+    line-height: 1.851852rem;
+
+
+}

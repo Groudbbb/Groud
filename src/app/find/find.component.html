@@ -1,3 +1,77 @@
-<p>
-  find works!
-</p>
+<div class="swiper-container" id="nav-swiper">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide active">热门</div>
+      <div class="swiper-slide">专栏</div>
+      <div class="swiper-slide">故事</div>
+      <div class="swiper-slide">杂志</div>
+     
+  </div>
+</div>
+<div class="find">
+
+    <app-search></app-search>
+    
+    <div class="swiper-container" id="content-swiper">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide" id="remeng" >
+            <dl *ngFor="let remen of remeng ">
+              <dd><a [routerLink]="['/findde',remen.resourceId]"><img src={{remen.smallCoverImage}} alt=""></a></dd>
+              <dt>
+                <h3>{{remen.resourceName}}</h3>
+
+                <p>{{remen.subTitle}}</p>
+
+               <p><span>￥{{remen.price}}</span><span><img src="{{remen.publisher.displayImage}}" alt=""></span></p>
+              </dt>
+            </dl>
+
+           
+          </div>
+          <div class="swiper-slide" id="zhuanlan">
+
+              <dl *ngFor="let remen of zhuanlan ">
+                  <dd><img src={{remen.smallCoverImage}} alt=""></dd>
+                  <dt>
+                    <h3>{{remen.resourceName}}</h3>
+    
+                    <p>{{remen.subTitle}}</p>
+    
+                   <p><span>￥9.9</span><span><img src="{{remen.publisher.displayImage}}" alt=""></span></p>
+                  </dt>
+                </dl>
+
+
+          </div>
+          <div class="swiper-slide" id="gushi">
+
+              <dl *ngFor="let remen of gushi ">
+                  <dd><img src={{remen.smallCoverImage}} alt=""></dd>
+                  <dt>
+                    <h3>{{remen.resourceName}}</h3>
+    
+                    <p>{{remen.subTitle}}</p>
+    
+                   <p><span>￥9.9</span><span><img src="{{remen.publisher.displayImage}}" alt=""></span></p>
+                  </dt>
+                </dl>
+          </div>
+          <div class="swiper-slide" id="zazhi">
+
+              <dl *ngFor="let remen of magzi ">
+                  <dd><img src={{remen.smallCoverImage}} alt=""></dd>
+                  <dt>
+                    <h3>{{remen.resourceName}}</h3>
+    
+                    <p>{{remen.subTitle}}</p>
+    
+                   <p><span>￥{{remen.price}}</span><span><img src="{{remen.publisher.displayImage}}" alt=""></span></p>
+                  </dt>
+                </dl>
+          </div>
+         
+      </div>
+    </div>
+
+
+</div>
+
