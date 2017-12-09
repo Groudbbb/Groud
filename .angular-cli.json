@@ -20,11 +20,14 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-       
-        "./assets/font/iconfont.css"
+        "./assets/font/iconfont.css",
+        "./assets/css/flexible.css"
+
       ],
       "scripts": [
-      
+        "../node_modules/_jquery@3.2.1@jquery/dist/jquery.js",
+        "assets/js/swiper-3.3.1.min.js"
+        
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

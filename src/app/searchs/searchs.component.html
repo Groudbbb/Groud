@@ -1,0 +1,41 @@
+<div class="searchs">
+
+
+<div class="top">
+    <div class="left">
+      <span>
+        <i class="iconfont icon-icon1" (click)="gobacks()"></i>
+      </span>
+  
+    </div>
+    <div class="center">
+  
+      <input type="text" placeholder="亲输入关键字"  [formControl] = "titleFilter" />
+    </div>
+  
+    <div class="right">
+        <span>
+            <i class="iconfont icon-sousuo" (click)="gosearchss()"></i>
+        </span>
+    </div>
+  
+  </div>
+  
+  <div class="bottom">
+
+
+      <dl *ngFor="let remen of serachresult | searchs : 'resourceName' :keyword ">
+          <dd><a [routerLink]="['/findde',remen.resourceId]"><img src={{remen.smallCoverImage}} alt=""></a></dd>
+          <dt>
+            <h3>{{remen.resourceName}}</h3>
+
+            <p>{{remen.subTitle}}</p>
+
+           <p><span>￥{{remen.price}}</span><span><img src="{{remen.publisher.displayImage}}" alt=""></span></p>
+          </dt>
+        </dl>
+  
+  </div>
+  
+
+</div>

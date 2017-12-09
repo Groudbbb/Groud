@@ -4,6 +4,7 @@ import {equalPwdValidator, mobileValidator, mobileAsyncValidator, pwdValidator} 
 import {Http} from "@angular/http"
 import { Observable } from 'rxjs';
 import * as $ from "jquery"
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   
   formModel:FormGroup
   dataSource:Observable<any>   // 可观察对象
-  constructor(fb:FormBuilder,private http:Http) { 
+  constructor(fb:FormBuilder,private http:Http,private route:Router) { 
     this.formModel = fb.group({
        mobile:["",mobileValidator,mobileAsyncValidator],
        password:["",pwdValidator],
@@ -37,14 +38,21 @@ export class LoginComponent implements OnInit {
         "password":this.formModel.value.password
       },
       success(data){
-        if(data==1){
-          alert("登录成功");
-        }else{
-          alert("登录失败");
-        }
+        // if(data==1){
+        //   alert("登录成功");
+        // }else{
+        //   alert("登录失败");
+        // }
       }
     })
     localStorage.username = this.formModel.value.mobile;
-    location.href="../home";
+    location.href="../home/mine";
+  }
+
+
+
+  goregister(){
+    this.route.navigate(['/register'])
+
   }
 }
