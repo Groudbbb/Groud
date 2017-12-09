@@ -1,0 +1,26 @@
+<div class="timedetail" *ngFor = "let item of getdetail">
+    <div class="detailtop">
+      <img [src]="item?.coverImage" alt="">
+      <i class="iconfont icon-icon1" (click)="goback()"></i>
+    </div>
+
+    <div class="user">
+      <div class="userleft">
+          <img src="" alt="">
+          <span>南方周开任务</span>
+      </div>
+     
+      <div class="userright">
+        关注
+      </div>
+    </div>
+
+    <div class="bottom">
+      <h1>{{item?.title}}</h1>
+      <img [src]="item?.coverImage" alt="">
+      <div class="content" [innerHTML]="item?.content">
+      
+      </div>
+     
+    </div>
+</div>

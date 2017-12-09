@@ -11,6 +11,12 @@ gettimedata(){
 }
 
 
+//获取详情页加载数据
+gettimedetail(id){
+  return this.http.get(this.baseUrl+"/homeDetails",{params:{id:id}})
+}
+
+
 
 
 //点赞

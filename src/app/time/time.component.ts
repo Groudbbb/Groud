@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GettimedataService } from '../service/gettimedata.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-time',
@@ -9,7 +10,7 @@ import { GettimedataService } from '../service/gettimedata.service';
 export class TimeComponent implements OnInit {
   private data=[];
   private aa = false;
-  constructor(private getdata:GettimedataService) { }
+  constructor(private getdata:GettimedataService,private router:Router) { }
 
   ngOnInit() {
 
@@ -26,6 +27,12 @@ export class TimeComponent implements OnInit {
     .subscribe((result)=>{
       console.log(result);
     })
+  }
+
+  //详情页跳转
+  godetail(id){
+    console.log(id);
+    this.router.navigate(["/timedetail"],{queryParams:{id:id}});
   }
 
 }

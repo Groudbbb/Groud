@@ -13,21 +13,23 @@ import { GettimedataService } from './service/gettimedata.service';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TimedetailComponent } from './timedetail/timedetail.component';
 const routes:Routes = [
   {path:"",redirectTo:"home",pathMatch:"full"},
   {path:"home",component:HomeComponent,
-  
   children:[
     {path:"",redirectTo:"time",pathMatch:"full"},
     {path:"time",component:TimeComponent},
     {path:"find",component:FindComponent},
     {path:"message",component:MessageComponent},
-    {path:"mine",component:MineComponent},
+    {path:"mine",component:MineComponent}
+   
    
   ]
 },
 {path:"login",component:LoginComponent},
-{path:"register",component:RegisterComponent}
+{path:"register",component:RegisterComponent},
+{path:"timedetail",component:TimedetailComponent}
 ]
 
 @NgModule({
@@ -40,7 +42,8 @@ const routes:Routes = [
     MessageComponent,
     MineComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    TimedetailComponent
   ],
   imports: [
     BrowserModule,

@@ -20,11 +20,11 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "./assets/css/flexible.css",
+       
         "./assets/font/iconfont.css"
       ],
       "scripts": [
-        
+      
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
