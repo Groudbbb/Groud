@@ -21,7 +21,8 @@
       "styles": [
         "styles.css",
         "./assets/font/iconfont.css",
-        "./assets/css/flexible.css"
+        "./assets/css/flexible.css",
+        "./assets/css/swiper-3.3.1.min.css"
 
       ],
       "scripts": [
