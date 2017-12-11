@@ -12,7 +12,6 @@
         </div>
     </form>
       <button class="submit" (click)="onSubmit()" [disabled]="!(formModel.get('mobile').valid&&formModel.get('password').valid&&formModel.get('mobile').touched)" [class.red]="formModel.get('mobile').valid&&formModel.get('password').valid&&formModel.get('mobile').touched">登录</button>
-      <p>忘记密码</p>
       <p (click)="goregister()">注册</p>
   </section>
 </div>
